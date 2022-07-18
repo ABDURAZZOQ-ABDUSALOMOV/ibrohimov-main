@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/auth-page.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/00c32c0180.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <form method="POST">{% csrf_token %}
+        <input type="text" class="text-input" value="+998" name="phone-number">
+        <input type="submit" class="submit-input">
+
+        <input type="hidden"  placeholder="John" name="firstName" value="error">
+    </form>
+ 
+</body>
+</html>
+
+

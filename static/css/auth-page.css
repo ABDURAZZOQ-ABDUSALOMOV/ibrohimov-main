@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width:576px) {
+
+    body {
+        background-color: #2084e9;
+    }
+
+    form {
+        text-align: center !important;
+        margin-top: 30vh;
+    }
+
+    input {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #f0f8ffd8;
+    }
+
+    .text-input {
+        padding: 10px 15px;
+        box-sizing: border-box;
+        font-size: medium;
+    }
+
+    .submit-input {
+        font-size: medium;
+        color: #fff;
+        background-color: #2b61ea;
+        padding: 10px 20px;
+    }
+}

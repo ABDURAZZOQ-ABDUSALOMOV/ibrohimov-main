@@ -1,0 +1,186 @@
+:root {
+    --main-color: #2084e9;
+}
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+@media (max-width:576px) {
+    body {
+        height: 100% !important;
+    }
+
+    .top {
+        background-color: var(--main-color);
+        height: 6vh;
+    }
+
+    .d-flex {
+        padding: 0px 5px;
+        height: 6vh;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        color: aliceblue;
+    }
+
+
+    h3 {
+        font-size: 25px;
+    }
+
+
+   
+    .side-menu {
+        
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fad458;
+        z-index: 3000;
+        height: 100%;
+        width: 0;
+        transition: 0.4s ease;        
+    }    
+    .side-menu.active {
+        padding: 10px;
+        width: 80vw;
+    }
+
+    .side-menu .fa-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .fa-close::before {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    .profile-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;        
+    }
+
+    .side-top {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .data {
+        padding: 5px;
+    }
+
+    .firstName, .lastName {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .side-body .menu{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    .side-body .menu a {
+        border-radius: 5px;
+        width: 100%;
+        background-color: #2a8cff;
+        font-size: 18px;
+        text-decoration: none;
+        color: #000;
+        padding: 10px;
+        margin-bottom: 2px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 21px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .my-shops {
+        height: 40vh !important;
+        overflow-x: auto;
+    }
+    .my-shops a {
+        width: 100%;
+        display: inline-block;
+        text-decoration: none;
+        margin-bottom: 3px !important;
+    }
+    .my-shops .shop {
+        border-radius: 5px;
+        height: 80px;
+        padding: 5px;
+        background-color: #2a8cff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #000;
+    }
+
+    .my-shops .shop .name {
+        font-size: 20px;
+    }
+
+    .shop img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .fixed-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 7vh;
+        background-color: #2084e9;
+        color: white;
+        padding: 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px -1px 20px 1px rgba(0, 0, 0, 0.500);
+    }
+    .fixed-bottom .button {
+        text-decoration: none;
+        color: #a3c5e7;
+    }
+    .fixed-bottom .button.active {
+        color:  #fff;
+        
+    }
+
+    #a {
+        width: 100%;
+        height: 50px;
+        background-color: #fad458;
+        display: none;
+    }
+    #b {
+        width: 100%;
+        height: 50px;
+        background-color: #2a8cff;
+        display: none;
+    }
+    #c {
+        display: none;
+        width: 100%;
+        height: 50px;
+        background-color: #dc3545;
+    }
+
+    .body div.active {
+        display: block !important; 
+    }
+
+}

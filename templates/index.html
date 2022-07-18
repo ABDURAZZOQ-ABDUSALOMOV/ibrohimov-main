@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/00c32c0180.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="side-menu">
+        <i class="fas fa-close"></i>
+        <div class="side-top">
+            <img src="{% static 'img/ico.jpg' %}" class="profile-img" alt="">
+            <div>
+                <div class="firstName data">{{ request.user.first_name }}</div>
+                <div class="lastName data">{{ request.user.last_name }}</div>
+                <div class="phone data">{{ request.user.phone }}</div>
+            </div>
+        </div>
+        <div class="side-body">
+            <div class="menu">
+                <a href="" class="btn">Xaridlar qutisi</a>
+                <a href="" class="btn">Hamyon</a>
+                <a href="" class="btn">Sozlamalar</a>
+                <a href="{% url 'createShop' %} " class="btn">Do'kon ochish</a>
+                <a href="" class="btn">Do'konni qo'shish</a>
+            </div>
+            <div class="title">
+                Mening do'konlarim
+            </div>
+            <div class="my-shops">
+                {% for i in shops %}
+                    <a href="#">
+                        <div class="shop" style="{% if i.host == request.user %}background-color: #dc3545;{% endif %}">
+                            <div class="img">
+                                <img src="{% static 'img/ico.jpg' %}" alt="">
+                            </div>
+                            <div class="cont">
+                                <div class="name">{{ i.name }}</div>
+                                <div class="chegirma">5% chegirma</div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="top">
+        <div class="navbar d-flex">
+            <i class="fas fa-list-ul"></i>
+
+            <h3>Online</h3>
+
+            <div class="search-img">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <div class="body">
+            <div id="a" class="active">
+            </div>
+            <div id="b">
+            </div>
+            <div id="c">
+            </div>
+        </div>
+
+        <div class="fixed-bottom ">
+            <a class="button active" href="#" id="boshSahifa">
+                Bosh sahifa
+            </a>
+            <a class="button " href="#" id="yaqinAtrof">
+                Yaqin atrof
+            </a>
+            <a class="button " href="#" id="joylashuv">
+                Joylashuv
+            </a>
+        </div>
+    </div>
+
+
+
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+
+</html>

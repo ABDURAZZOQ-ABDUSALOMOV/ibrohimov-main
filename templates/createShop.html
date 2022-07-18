@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/createShop.css' %}">
+    <script src="https://kit.fontawesome.com/00c32c0180.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <form class="form" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <input type="text" placeholder="Shop title ..." name="n" required>
+            <textarea placeholder="Shop description ..." name="d" required></textarea>
+            <input type="password" placeholder="Shop password ..." name="p" required> <br>
+            <select name="v"  required>
+                <option selected>...</option>
+                {% for vil in v %}
+                    <option value="{{ vil.id }}">{{ vil.name }}</option>
+                {% endfor %}
+            </select><br>
+            <select name="t" required>
+                <option selected>...</option>
+                {% for tum in t %}
+                    <option value="{{ tum.id }}">{{ tum.name }}</option>
+                {% endfor %}
+            </select><br>
+            <input type="file" name="i" required><br>
+            <input type="submit" value="Create Shop">
+        </form>
+    </div>
+
+</body>
+</html>
